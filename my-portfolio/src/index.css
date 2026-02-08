@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@supports (font-variation-settings: normal) {
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  }
+}
