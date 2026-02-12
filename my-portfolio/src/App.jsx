@@ -88,6 +88,60 @@ function App() {
           </div>
         </div>
 
+        <div className='mt-8 w-full flex flex-col sm:flex-row gap-6'>
+          <div className="w-full sm:w-1/2 flex flex-col">
+            <h2 className="text-lg font-bold text-gray-800 mb-3">Previous Collaborations and Testimonies</h2>
+            <div>
+              <div className="flex flex-col gap-3">
+                <div className="bg-white rounded-lg p-3 shadow-sm border-l-4 border-[#1e1e1e]">
+                  <p className="text-gray-800 text-sm leading-relaxed italic">
+                    "Jeyem is a highly skilled and dedicated software engineer. He consistently delivers high-quality work and is a pleasure to collaborate with. His problem-solving abilities and attention to detail are exceptional, making him an invaluable asset to any team."
+                  </p>
+                  <p className="text-gray-600 text-xs font-semibold mt-2">— Jayr Agamata</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Contact section */}
+          <div className="w-full sm:w-1/2">
+            <h2 className="text-lg font-bold text-gray-800 mb-3">Get In Touch</h2>
+            <div>
+              <div className="space-y-2">
+                <p className="text-gray-700 text-sm leading-relaxed">
+                  Have a project in mind or want to collaborate? Feel free to reach out! I'm always open to discussing new opportunities.
+                </p>
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2">
+                    <span className="text-gray-600 font-semibold text-sm">Email:</span>
+                    <a href="mailto:jeyemcats@gmail.com" className="text-[#1e1e1e] hover:text-[#1e1e1e] text-sm">jeyemcats@gmail.com</a>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-gray-600 font-semibold text-sm">Phone:</span>
+                    <span className="text-gray-700 text-sm">+63 961 606 0087</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Footer */}
+        <footer className="mt-12 pt-8 border-t border-gray-300">
+          <div className="flex flex-col sm:flex-row justify-between items-center">
+            <div className="text-center sm:text-left mb-4 sm:mb-0">
+              <p className="text-gray-800 font-semibold">Jeyem</p>
+              <p className="text-gray-600 text-xs">Software Engineer & Content Creator</p>
+            </div>
+            <div className="text-center text-gray-600 text-xs">
+              <p>© 2026 Jeyem. All rights reserved.</p>
+            </div>
+            <div className="text-center sm:text-right mt-4 sm:mt-0">
+              <p className="text-gray-600 text-xs">
+                Made with <span className="text-[#1e1e1e]">❤</span> using React & Tailwind CSS
+              </p>
+            </div>
+          </div>
+        </footer>
       </div>
     </div>
   )

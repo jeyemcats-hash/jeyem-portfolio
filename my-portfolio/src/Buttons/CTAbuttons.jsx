@@ -1,12 +1,39 @@
 import { motion } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import ScheduleCallModal from "../components/ScheduleCallModal";
 
 const CtaButton = () => {
+  const [isScheduleModalOpen, setIsScheduleModalOpen] = useState(false);
+
+  const handleScheduleClick = () => {
+    setIsScheduleModalOpen(true);
+  };
+
+  const handleEmailClick = () => {
+    window.location.href = "mailto:jeyemcats@gmail.com";
+  };
+
   return (
-    <div className="flex min-h-[35px] items-center justify-center gap-2 sm:gap-4 px-2 sm:px-4 flex-wrap sm:flex-nowrap">
-      <SpotlightButton text="Schedule a Call" bgColor="bg-[#1e1e1e]" spotlightColor="bg-slate-100" />
-      <SpotlightButton text="Send an Email" bgColor="bg-[#1e1e1e]" spotlightColor="bg-slate-100" />
-    </div>
+    <>
+      <div className="flex min-h-[35px] items-center justify-center gap-2 sm:gap-4 px-2 sm:px-4 flex-wrap sm:flex-nowrap">
+        <SpotlightButton 
+          text="Schedule a Call" 
+          bgColor="bg-[#1e1e1e]" 
+          spotlightColor="bg-slate-100" 
+          onClick={handleScheduleClick}
+        />
+        <SpotlightButton 
+          text="Send an Email" 
+          bgColor="bg-[#1e1e1e]" 
+          spotlightColor="bg-slate-100"
+          onClick={handleEmailClick}
+        />
+      </div>
+      <ScheduleCallModal 
+        isOpen={isScheduleModalOpen} 
+        onClose={() => setIsScheduleModalOpen(false)} 
+      />
+    </>
   );
 };
 
@@ -14,7 +41,8 @@ const SpotlightButton = ({
   text = "Schedule a Call",
   bgColor = "bg-black",
   spotlightColor = "bg-slate-100",
-  spotlightSize = "h-32 w-32"
+  spotlightSize = "h-32 w-32",
+  onClick = () => {}
 }) => {
   const btnRef = useRef(null);
   const spanRef = useRef(null);
@@ -80,6 +108,7 @@ const SpotlightButton = ({
     <motion.button
       whileTap={{ scale: 0.985 }}
       ref={btnRef}
+      onClick={onClick}
       className={`relative w-full sm:w-250 max-w-xs overflow-hidden rounded-sm ${bgColor} px-3 sm:px-4 md:px-4 py-4 text-xs sm:text-sm font-medium text-white`}
     >
       <span className="pointer-events-none relative z-10 mix-blend-difference">

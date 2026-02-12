@@ -9,37 +9,37 @@ const SocialLinks = () => {
     {
       id: 1,
       name: "LinkedIn",
-      url: "https://linkedin.com/in/yourprofile",
+      url: "https://www.linkedin.com/in/john-michael-catalan-436290378/",
       icon: FaLinkedin
     },
     {
       id: 2,
       name: "GitHub",
-      url: "https://github.com/yourprofile",
+      url: "https://github.com/jeyemcats-hash",
       icon: FaGithub
     },
     {
       id: 3,
       name: "Instagram",
-      url: "https://instagram.com/yourprofile",
+      url: "https://www.instagram.com/johnmichael.chz/",
       icon: FaInstagram
     },
     {
       id: 4,
       name: "TikTok",
-      url: "https://tiktok.com/@yourprofile",
+      url: "https://www.tiktok.com/@yesimjohn",
       icon: FaTiktok
     },
     {
       id: 5,
       name: "Email",
-      url: "mailto:your@email.com",
+      url: "mailto:jeyemcats@gmail.com",
       icon: FaEnvelope
     },
     {
       id: 6,
       name: "Facebook",
-      url: "https://facebook.com/yourprofile",
+      url: "https://www.facebook.com/JohnMichaelCatalawn/",
       icon: FaFacebook
     }
   ];
