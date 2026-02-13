@@ -99,7 +99,7 @@ const SpotlightButton = ({
       whileTap={{ scale: 0.985 }}
       ref={btnRef}
       onClick={onClick}
-      className={`relative w-full overflow-hidden rounded-sm ${bgColor} px-3 sm:px-4 md:px-4 py-4 text-xs sm:text-sm font-medium text-white`}
+      className={`relative w-full sm:w-80 overflow-hidden rounded-sm ${bgColor} px-3 sm:px-4 md:px-4 py-4 text-xs sm:text-sm font-medium text-white`}
     >
       <span className="pointer-events-none relative z-10 mix-blend-difference">
         {text}
