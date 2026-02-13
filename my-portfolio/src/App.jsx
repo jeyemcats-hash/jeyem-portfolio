@@ -22,13 +22,13 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-4">
       <div className="bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 p-6 sm:p-10 max-w-5xl w-full">
-        <div className="flex gap-6 sm:gap-8 items-start">
+        <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 items-start sm:items-start">
           {/* Profile Image */}
           <div className="flex-shrink-0">
             <img 
               src={ isHovered? JeyemshyImg : JeyempicImg } 
               alt="Profile" 
-              className="w-44 h-50 rounded-lg object-cover hover:scale-101 transition-transform duration-300 cursor-pointer shadow-md hover:shadow-lg" 
+              className="w-40 sm:w-44 h-48 sm:h-50 rounded-lg object-cover hover:scale-101 transition-transform duration-300 cursor-pointer shadow-md hover:shadow-lg" 
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             />
