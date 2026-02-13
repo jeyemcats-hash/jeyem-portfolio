@@ -57,7 +57,7 @@ const SocialLinks = () => {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative flex items-center gap-3 p-3 rounded-lg overflow-hidden w-50"
+              className="relative flex items-center gap-3 p-3 rounded-lg overflow-hidden w-full"
               onMouseEnter={() => setHoveredId(link.id)}
               onMouseLeave={() => setHoveredId(null)}
             >
