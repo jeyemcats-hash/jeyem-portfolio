@@ -11,7 +11,7 @@ const CtaButton = () => {
 
   return (
     <>
-      <div className="flex min-h-[35px] items-center justify-center gap-2 sm:gap-4 px-2 sm:px-4 flex-wrap sm:flex-nowrap">
+      <div className="flex min-h-[35px] items-center justify-center gap-2 sm:gap-4 px-0 sm:px-2 w-full">
         <SpotlightButton 
           text="Schedule a Call" 
           bgColor="bg-[#1e1e1e]" 

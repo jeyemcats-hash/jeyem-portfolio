@@ -50,13 +50,13 @@ function App() {
 
               {/* Title */}
               <p className="text-neutral-900 text-xs sm:text-sm font-medium mb-4 leading-relaxed">
-                Software Engineer \ Content Creator
+                Entry Level Full Stack Developer \ Content Creator
               </p>
               {/* Achievement Badge */}
               <NeuButton onClick={handleScrollToProjects}></NeuButton>
             </div>
             {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-2 mt-4 ml-1">
+              <div className="flex flex-col gap-2 mt-4">
                 <CtaButton></CtaButton>
               </div>
           </div>
