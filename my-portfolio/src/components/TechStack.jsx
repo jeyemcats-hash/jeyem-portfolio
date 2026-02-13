@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
-import { FaReact, FaNode, FaGitAlt } from "react-icons/fa";
-import { SiExpress, SiFlutter, SiTailwindcss, SiPostgresql, SiMongodb, SiFirebase } from "react-icons/si";
-import { useRef, useEffect } from "react";
+import { FaReact, FaNode, FaGitAlt, FaHtml5, FaCss3Alt, FaJs, FaVuejs, FaPython } from "react-icons/fa";
+import { SiExpress, SiFlutter, SiTailwindcss, SiPostgresql, SiMongodb, SiFirebase, SiBootstrap, SiDart } from "react-icons/si";
+import { useRef, useEffect, useState } from "react";
 
 const TechStack = () => {
-  const techs = [
+  const [showAll, setShowAll] = useState(false);
+
+  const allTechs = [
     { id: 1, name: "React", icon: FaReact, color: "#61DAFB" },
     { id: 2, name: "Node.js", icon: FaNode, color: "#339933" },
     { id: 3, name: "Express", icon: SiExpress, color: "#000000" },
@@ -14,7 +16,16 @@ const TechStack = () => {
     { id: 7, name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
     { id: 8, name: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
     { id: 9, name: "Git", icon: FaGitAlt, color: "#F1502F" },
+    { id: 10, name: "HTML", icon: FaHtml5, color: "#E34C26" },
+    { id: 11, name: "CSS", icon: FaCss3Alt, color: "#1572B6" },
+    { id: 12, name: "JavaScript", icon: FaJs, color: "#F7DF1E" },
+    { id: 13, name: "Vue.js", icon: FaVuejs, color: "#4FC08D" },
+    { id: 14, name: "Bootstrap", icon: SiBootstrap, color: "#7952B3" },
+    { id: 15, name: "Dart", icon: SiDart, color: "#0175C2" },
+    { id: 16, name: "Python", icon: FaPython, color: "#3776AB" },
   ];
+
+  const techs = showAll ? allTechs : allTechs.slice(0, 9);
 
   return (
     <div className="flex-col">
@@ -41,7 +52,12 @@ const TechStack = () => {
           );
         })}
       </div>
-      <SpotlightButton text="View All" bgColor="bg-[#1e1e1e]" spotlightColor="bg-slate-100" />
+      <SpotlightButton 
+        text={showAll ? "View Less" : "View All"} 
+        bgColor="bg-[#1e1e1e]" 
+        spotlightColor="bg-slate-100" 
+        onClick={() => setShowAll(!showAll)}
+      />
     </div>
   );
 };
@@ -50,6 +66,7 @@ const SpotlightButton = ({
   text = "View All",
   bgColor = "bg-black",
   spotlightColor = "bg-slate-100",
+  onClick = () => {},
 }) => {
   const btnRef = useRef(null);
   const spanRef = useRef(null);
@@ -115,6 +132,7 @@ const SpotlightButton = ({
     <motion.button
       whileTap={{ scale: 0.985 }}
       ref={btnRef}
+      onClick={onClick}
       className={`relative w-full overflow-hidden rounded-sm ${bgColor} px-3 sm:px-4 md:px-4 py-4 text-xs sm:text-sm font-medium text-white`}
     >
       <span className="pointer-events-none relative z-10 mix-blend-difference">

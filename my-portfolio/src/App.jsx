@@ -8,6 +8,8 @@ import ExperienceTimeline from './components/ExperienceTimeline.jsx';
 import ProjectsCarousel from './components/ProjectsCarousel.jsx';
 import SocialLinks from './components/SocialLinks.jsx';
 import TechStack from './components/TechStack.jsx';
+import JeyempicImg from './assets/Jeyempic.png';
+import JeyemshyImg from './assets/Jeyemshy.png';
 
 
 function App() {
@@ -24,7 +26,7 @@ function App() {
           {/* Profile Image */}
           <div className="flex-shrink-0">
             <img 
-              src={ isHovered? "src/assets/Jeyemshy.png" : "src/assets/Jeyempic.png" } 
+              src={ isHovered? JeyemshyImg : JeyempicImg } 
               alt="Profile" 
               className="w-44 h-50 rounded-lg object-cover hover:scale-101 transition-transform duration-300 cursor-pointer shadow-md hover:shadow-lg" 
               onMouseEnter={() => setIsHovered(true)}

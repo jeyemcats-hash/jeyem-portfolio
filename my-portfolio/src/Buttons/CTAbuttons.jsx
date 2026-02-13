@@ -9,10 +9,6 @@ const CtaButton = () => {
     setIsScheduleModalOpen(true);
   };
 
-  const handleEmailClick = () => {
-    window.location.href = "mailto:jeyemcats@gmail.com";
-  };
-
   return (
     <>
       <div className="flex min-h-[35px] items-center justify-center gap-2 sm:gap-4 px-2 sm:px-4 flex-wrap sm:flex-nowrap">
@@ -21,12 +17,6 @@ const CtaButton = () => {
           bgColor="bg-[#1e1e1e]" 
           spotlightColor="bg-slate-100" 
           onClick={handleScheduleClick}
-        />
-        <SpotlightButton 
-          text="Send an Email" 
-          bgColor="bg-[#1e1e1e]" 
-          spotlightColor="bg-slate-100"
-          onClick={handleEmailClick}
         />
       </div>
       <ScheduleCallModal 
