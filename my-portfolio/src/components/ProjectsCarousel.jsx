@@ -1,6 +1,13 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
+import LOGINPAGE from "../assets/LOGINPAGE.png";
+import VIEWITEM from "../assets/VIEWITEM.png";
+import ORDERS from "../assets/ORDERS.png";
+import ADMINPANEL from "../assets/ADMINPANEL.png";
+import ADMINLOGIN from "../assets/ADMINLOGIN.png";
+import loading from "../assets/loading.png";
+import Proximity from "../assets/Proximity.png";
 
 const ProjectsCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -12,24 +19,24 @@ const ProjectsCarousel = () => {
       id: 1,
       title: "E-commerce Platform",
       images: [
-        "src/assets/LOGINPAGE.png",
-        "src/assets/VIEWITEM.png",
-        "src/assets/ORDERS.png",
-        "src/assets/ADMINPANEL.png",
-        "src/assets/ADMINLOGIN.png"
+        LOGINPAGE,
+        VIEWITEM,
+        ORDERS,
+        ADMINPANEL,
+        ADMINLOGIN
       ],
       description: "Full-stack web application"
     },
     {
       id: 2,
       title: "Web-based A.I Business Assistant",
-      images: ["src/assets/loading.png"],
+      images: [loading],
       description: "Web-based A.I business assistant designed to streamline operations and enhance customer engagement for small businesses"
     },
     {
       id: 3,
       title: "Proximity Dating App",
-      images: ["src/assets/Proximity.png"],
+      images: [Proximity],
       description: <>UI/UX design and Wireframing for<br />a proximity-based dating app</>
     },
     {
