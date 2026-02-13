@@ -56,7 +56,7 @@ function App() {
               <NeuButton onClick={handleScrollToProjects}></NeuButton>
             </div>
             {/* Action Buttons */}
-              <div className="flex flex-col gap-2 mt-4 sm:ml-5">
+              <div className="flex flex-col gap-2 mt-4">
                 <CtaButton></CtaButton>
               </div>
           </div>
